@@ -1,0 +1,179 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.menu_main{
+		font-size: 15px;
+
+	}
+	
+	.header_topline {
+		line-height: 50px;
+
+	}
+	.top_contacts a{
+		font-size: 12px;
+	}
+	.top_contacts p{
+		font-size: 25px;
+	}
+	.slider .button {
+		margin: 0 25% 0 25%;
+	}
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.top_contacts {
+		display: block;
+	}
+	.header_topline img{
+		max-width: 60%;
+		height: auto;
+	}
+	.menu_main ul li{
+		display: inline-block !important;
+	}
+	.slider .button {
+		width: 200px;
+	}
+
+	.icons ul li {
+		margin: 25px;
+		max-width: 100%;
+		float: left;
+
+	}
+	.icons h3{
+		display: block;
+		margin: auto;
+	}
+	.icons i{
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.top_contacts {
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 50px;
+		background-color: #4A5157;
+		padding: 5px;
+
+	}
+	
+	.header_topline img {
+		margin-bottom: 2px;
+		max-width: 100%;
+		height: auto;
+	}
+	
+	
+	.menu_main ul li{
+		display: block;
+		background-color: #4A5157;
+	}
+	.menu_main {
+		display: none;
+		position: absolute;
+		top: 130px;
+		left: 0px;	
+		padding: 5px;
+		background-color: #4A5157;
+	}
+	.list{
+		background-color: #4A5157;
+	}
+	.slider .button {
+		margin: 0 28% 0 28%;
+	}
+	
+	.icons i{
+		display: block;
+		float: none;
+		padding: auto;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+	.icons ul li {
+		padding: 0px;
+		margin: auto;
+		max-width: 100%;
+		float: none;
+		display: block;
+	}
+	.icons h3{
+		display: block;
+		margin: auto;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.menu_main ul li{
+		padding-left: 7px;
+		display: block;
+		background-color: #4A5157;
+	}
+	.menu_main {
+		top: 100px;
+		left: 30px;	
+		padding: 5px;
+	}
+	.list{
+		background-color: #4A5157;
+	}
+	.slider .button {
+		margin: 0 20% 0 20%;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	.menu_main ul li {
+		display: block !important;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.top_contacts {
+		display: block !important;
+	}
+	
+	.menu_main {
+		display: block !important;
+	}
+	
+	.menu_main ul li {
+		display: inline-block !important;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+		
+	
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	
+}

@@ -1,0 +1,379 @@
+
+/*В этом файле стили для надписей в формах и плэйсхолдерах. Например, 
+форма обратной связи*/
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+
+/**/
+/*Проверка на правильность -  если что-то неправильно, то знак восклицания, 
+если все ок - то зеленая галочка*/
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+}
+.hidden {
+	display: none;
+}
+.carousel img {
+	width: 100%;
+	height: auto;
+}
+.parallax {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	position: relative;
+}
+
+/*МЕНЮ*/
+
+	.button_contacts {
+		background-color: transparent;
+		border: medium none;
+		color: #CFEDE4;
+		float: left;
+		display: block;
+		font-size: 35px;
+		position: absolute;
+
+	}
+	.button_menu {
+		border: medium none;
+		background-color: transparent;
+		color: #CFEDE4;
+		font-size: 25px;
+		position: absolute;
+		top: 35px;
+		left: -4px;
+		display: block;
+
+	}
+
+	
+	.header_topline {
+		background-color: #43484C;
+		line-height: 35px;
+	}
+	.header_topline img{
+		max-width: 50%;
+		display: block;
+		float: left;
+		height: auto;
+		padding-top: 20px;
+	}
+
+	.top_contacts{
+		float: right;
+		color: #CFEDE4;
+		padding-bottom: 5px;
+		padding: 10px;
+		z-index: 15;
+	}
+	.top_contacts a{
+		color: #CFEDE4;
+		display: block;
+		margin-bottom: -15px;
+		padding: 0px;
+		font-size: 14px;
+		text-decoration: underline;
+		text-transform: uppercase;
+		
+	}
+	.top_contacts a:hover{
+		color: #CFEEC8;
+		text-decoration: none;
+	}
+	.top_contacts p{
+		display: block;
+		font-size: 28px;
+		margin: auto;
+	}
+
+	.menu_main {
+		float: right;
+		margin-bottom: 5px;
+		margin-top: -20px;
+		z-index: 20;
+
+
+	}
+	.menu_main ul {
+		list-style-type: none;
+		float: right;
+		text-transform: uppercase;
+		padding: 0px;
+		margin: 0px;
+
+	}
+	.menu_main ul li{
+		display: inline-block;
+
+
+	}
+	.menu_main a{
+
+		padding: 7px;
+		color: #fff;
+		/*Чтобы при наведении мышкой цвет менялся плавно*/
+		-webkit- transition: all .25s;
+		-o- transition: all .25s;
+		transition: all .25s;
+	}
+	.menu_main a:hover {
+	}
+	.list {
+		background-color: #43484C;
+		margin-right: 10px;
+
+	}
+	.list:hover {
+		//*background-color: #585D61;*//
+		border: #fff 0.1px;
+		border-style: dashed;
+	}
+
+
+/*ВСПЛЫВАЮЩЕЕ ОКНО*/
+
+
+	.pop_form input[type="text"] {
+		display: block;
+		line-height: 28px;
+		width: 90%;
+		margin: 0 auto 12px;
+		/*Настройка рамки: цвет, ширина и т.д.*/
+		border: #999 3px solid;
+		padding: 5px;
+	}
+
+	.pop_form .button {
+		display: block;
+		margin: 20px auto 0;
+	}
+
+	.pop_form h3{
+		margin: 10px auto 15px;
+		text-align: center;
+		font-weight: normal;
+		font-family: "RobotoCondensedBold";
+		text-transform: uppercase;
+	}
+	.button {
+		border: none;
+		padding: 10px 20px;
+		background-color: #FE6748;
+		color: #fff;
+		border-radius: 3px;
+		text-transform: uppercase;
+	}
+	.button:hover {
+		background-color: transparent;
+		color: #FE6748;
+		border: #FE6748 1px solid;
+	}
+	.button:active{
+		background-color: #B04A35;
+	}
+
+
+/*СЛАЙДЕР*/
+	.slider {
+		background-color: #E8E8E8;
+		padding-bottom: 2px;
+	}
+	.top_content {
+		background-color: #E8E8E8;
+		padding-bottom: 2px;
+	}
+	.slide_item img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	h1 {
+		text-transform: uppercase;
+		text-align: center;
+		font-family: "RobotoMedium";
+		color: #43484C;
+
+	}
+	
+
+/* УТП */
+	h3 {
+		color: #43484C;
+		font-family: "RobotoMedium";
+		text-align: center;
+		font-size: 30px;
+	}
+	.slider_container {
+		position: relative;
+	}
+
+
+	.next_button, .prev_button {
+		color: #5A5990;
+		font-size: 35px;
+		position: absolute;
+		/*Чтобы при наведении мышкой курсор менялся на "руку"*/
+		cursor: pointer;
+		top: 40%;
+		z-index: 10;
+		/*Чтобы кнопки были видны - добавим на бэкграунд полупрозрачный фон*/
+		background-color: rgba(232,232,232, 0.5);
+		padding:0 19px 3px;
+		border-style: solid; ;
+		border-color: #5A5990;
+
+		/*чтобы кнопки стали круглыми*/
+		border-radius: 150px;
+	}
+
+	.next_button {
+		/*Отступ справа 20 пикселей*/
+		right: 5px;
+	}
+
+	.prev_button {
+		left: 5px;
+	}
+
+	.slider .button {
+		padding: 0 15px;
+		line-height: 53px;
+		display: block;
+		text-align: center;
+		margin: 0 30% 0 30%;
+		font-size: 20px;
+		/*Чтобы при наведении мышкой цвет менялся плавно*/
+		-webkit- transition: all .20s;
+		-o- transition: all .20s;
+		transition: all .20s;
+	}
+	/*.slider p {
+		font-size: 20px;
+		display: block;
+		margin-bottom: 50px;
+	}
+	.utp i {
+		display: block;
+		float: left;
+		font-size: 30px;
+		margin: 1px 5px 0;
+		color: #5A5990;
+	} */
+	.utp {
+		position: absolute;
+		left: 55%;
+		width: 500px;
+		bottom: 0%;
+	}
+/*БОКОВЕ МЕНЮ*/
+.left_aside {
+	background-color: #43484C;
+	width: 100%;
+	padding: 0px;
+}
+.left_aside ul{
+	width: 100%;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+}
+.left_aside ul li{
+	line-height: 41px;
+	border: 1px #E8E8E8 solid;
+	font-size: 16px;
+
+
+}
+.left_aside a{
+	color: #CFEDE4;
+	display: block;
+	padding: 10px;
+
+}
+.left_aside li:hover {
+	background-color: #585D61;	
+	border: 4px #E8E8E8 solid;
+	-webkit-transition: all .20s;
+	-o-transition: all .20s;
+	transition: all .20s;
+}
+.category_active {
+	background-color: #585D61;	
+}
+
+/*СХЕМА РАБОТЫ*/
+	
+	.icons ul {
+		list-style-type: none;
+		font-size: 20px;
+	}
+	.icons ul li {
+		display: inline-block;
+		padding: 15px;
+		text-align: center;
+		max-width: 25%;
+		float: left;
+
+	}
+	.icons i {
+		color: #43484C;
+		font-size: 100px;
+		background-color: rgba(232,232,232, 0.5);
+		padding:30px 40px 30px 30px;
+		border: 15px;
+		border-style: solid; 
+		border-color: #43484C;
+		border-radius: 3px;
+		margin: 20px;
+		display: inline-block;
+		width: 190px;
+		margin-left: 20px;
+	}
+	.icons h3{
+		float: left;
+		margin-bottom: -10px;
+
+	}
+	
+/*ФУТЕР*/
+
+footer {
+	max-height: 100px;
+	min-height: 50px;
+	color: #CFEDE4;
+	background-color: #43484C;
+}
+
+/*КАЛЬКУЛЯТОР*/
+.category_order {
+	
+}
