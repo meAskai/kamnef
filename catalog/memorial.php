@@ -159,6 +159,13 @@
 						Количество: <input type="number" name="podstavka_number" id="podstavka_number" min="0" class="memorial_number" value="0">
 						Сумма: <input type="text" name="podstavka_sum" id="sum" readonly> <i class="fa fa-rub"></i>
 					</p>
+					<h4>Полировка:</h4>
+					<p> <select name="polirovka" class="polirovka">
+							<option value="1" selected="">1-сторонняя</option>
+							<option value="2">2-сторонняя</option>
+							<option value="5">5-сторонняя</option>																				
+						</select>						
+					</p>
 					<h4>Цветник:</h4>
 					<p>
 						Размер: <select name="cvetnik_size" class="cvetnik_size">
@@ -175,8 +182,8 @@
 							<option value="1400*100*100">1400*100*100</option>
 							<option value="1500*100*100">1500*100*100</option>							
 						</select>
-						Количество: <input type="number" name="cvetnik_number" placeholder="0" step="2">
-						<!--Сумма: <input type="text" name="stela_sum" readonly> <i class="fa fa-rub"></i> -->
+						Количество: <input type="number" name="cvetnik_number" min="0" step="2">
+						Сумма: <input type="text" name="cvetnik_sum" id="cvetnik_sum" readonly> <i class="fa fa-rub"></i>
 					</p>
 					<h4>Прикладная:</h4>
 					<p>
@@ -193,15 +200,14 @@
 							<option value="900*100*100">900*100*100</option>													
 						</select>
 						Количество: <input type="number" name="priklad_number" placeholder="0">
-						<!--Сумма: <input type="text" name="stela_sum" readonly> <i class="fa fa-rub"></i> -->
+						Сумма: <input type="text" name="priklad_sum" id="priklad_sum" readonly> <i class="fa fa-rub"></i>
 					</p>
-					<h4>Полировка:</h4>
-					<p> <select name="polirovka" class="polirovka">
-							<option value="1" selected="">1-сторонняя</option>
-							<option value="2">2-сторонняя</option>
-							<option value="5">5-сторонняя</option>																				
-						</select>
-						
+					<h4>Полировка для цветника и прикладной:</h4>
+					<p> <select name="polirovka_cvet" class="polirovka_cvet">
+							<option value="once" selected="">1-сторонняя</option>
+							<option value="all">Полная</option>																			
+						</select> <span id="polir_descr"> *у цветника и прикладной полируется
+						только одна видимая сторона</span>					
 					</p>
 					<p>
 						Итоговая сумма: <input type="text" name="itog_sum" readonly>
@@ -255,6 +261,7 @@
 	<script src="../libs/equalheight/jquery.equalheight.js"></script>
 	<script src="../libs/stellar/jquery.stellar.min.js"></script>
 	<script src="../js/common.js"></script>
+	<script src="../js/stela_calculation.js"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 	</body>
