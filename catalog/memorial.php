@@ -113,12 +113,12 @@
 			<!-- end category_descr -->
 			<!-- begin category_order -->
 			<div class="category_order">
-				<form action="memorial_handler" method="POST">
+				<form id="memorial_order">
 					<h3>Расчет стоимости</h3>
 					<h4>Стела:</h4>
 					<p>
 						Размер: <select name="stela_size" class="stela_size">
-							<option value="" selected=""></option>
+							<option value="0" selected></option>
 							<option value="600*400*50">600*400*50</option>
 							<option value="600*400*60">600*400*60</option>
 							<option value="800*400*60">800*400*60</option>
@@ -137,14 +137,14 @@
 							<option value="1400*700*120">1400*700*120</option>
 							<option value="1500*750*120">1500*750*120</option>
 						</select>
-						Количество: <input type="number" name="stela_number" id="stela_number" min="0" class="memorial_number" value="0">
-						Сумма: <input type="text" name="stela_sum" id="stela_sum" readonly> <i class="fa fa-rub"></i>
+						Количество: <input type="number" name="stela_number" id="stela_number" min="0" class="order_number" value="0">
+						Сумма: <input type="text" name="stela_sum" id="stela_sum" class="order_presum" readonly> <i class="fa fa-rub"></i>
 						
 					</p>
 					<h4>Поставка:</h4>
 					<p>
 						Размер: <select name="podstavka_size" class="podstavka_size">
-							<option value="" selected=""></option>
+							<option value="0" selected=""></option>
 							<option value="500*120*120">500*120*120</option>
 							<option value="500*150*120">500*150*120</option>
 							<option value="500*150*150">500*150*150</option>
@@ -156,8 +156,8 @@
 							<option value="800*200*200">800*200*200</option>
 							<option value="900*250*200">900*250*200</option>
 						</select>
-						Количество: <input type="number" name="podstavka_number" id="podstavka_number" min="0" class="memorial_number" value="0">
-						Сумма: <input type="text" name="podstavka_sum" id="sum" readonly> <i class="fa fa-rub"></i>
+						Количество: <input type="number" name="podstavka_number" id="podstavka_number" min="0" class="order_number" value="0">
+						Сумма: <input type="text" name="podstavka_sum" id="sum" class="order_presum" readonly> <i class="fa fa-rub"></i>
 					</p>
 					<h4>Полировка:</h4>
 					<p> <select name="polirovka" class="polirovka">
@@ -169,7 +169,7 @@
 					<h4>Цветник:</h4>
 					<p>
 						Размер: <select name="cvetnik_size" class="cvetnik_size">
-							<option value="0" selected=""></option>
+							<option value="0" selected></option>
 							<option value="600*50*80">600*50*80</option>
 							<option value="800*60*80">800*60*80</option>
 							<option value="900*60*80">900*60*80</option>
@@ -182,8 +182,8 @@
 							<option value="1400*100*100">1400*100*100</option>
 							<option value="1500*100*100">1500*100*100</option>							
 						</select>
-						Количество: <input type="number" name="cvetnik_number" min="0" step="2">
-						Сумма: <input type="text" name="cvetnik_sum" id="cvetnik_sum" readonly> <i class="fa fa-rub"></i>
+						Количество: <input type="number" name="cvetnik_number" id="cvetnik_number" class="order_number" min="0"  step="2" value="0">
+						Сумма: <input type="text" name="cvetnik_sum" id="cvetnik_sum" class="order_presum" readonly> <i class="fa fa-rub"></i>
 					</p>
 					<h4>Прикладная:</h4>
 					<p>
@@ -194,13 +194,13 @@
 							<option value="600*60*80">600*60*80</option>
 							<option value="600*80*80">600*80*80</option>
 							<option value="700*80*80">700*80*80</option>
-							<option value="800*80*100">800*80*100</option>
 							<option value="700*80*100">700*80*100</option>
+							<option value="800*80*100">800*80*100</option>
 							<option value="800*100*100">800*100*100</option>
 							<option value="900*100*100">900*100*100</option>													
 						</select>
-						Количество: <input type="number" name="priklad_number" placeholder="0">
-						Сумма: <input type="text" name="priklad_sum" id="priklad_sum" readonly> <i class="fa fa-rub"></i>
+						Количество: <input type="number" name="priklad_number" id="priklad_number" class="order_number" min="0" value="0">
+						Сумма: <input type="text" name="priklad_sum" id="priklad_sum" class="order_presum" readonly> <i class="fa fa-rub"></i>
 					</p>
 					<h4>Полировка для цветника и прикладной:</h4>
 					<p> <select name="polirovka_cvet" class="polirovka_cvet">
@@ -210,7 +210,7 @@
 						только одна видимая сторона</span>					
 					</p>
 					<p>
-						Итоговая сумма: <input type="text" name="itog_sum" readonly>
+						Итоговая сумма: <input type="text" name="order_sum" class="order_sum" id="itog_memo"  readonly>
 						<button type="submit" name="submit" class="button">Сделать заказ</button>
 					</p>
 
