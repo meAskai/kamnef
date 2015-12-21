@@ -7,6 +7,12 @@ $(document).ready(function(){
               return false;
           }
      });
+	$("#memorial_order").keypress(function(e) {
+          if (e.which == 13) {
+              $(this).click();
+              return false;
+          }
+     });
 	/*Если позицию полировки меняют, то другие позиции сбрасываются до нуля*/
 	$(".polirovka").change(function(){
 				$("#stela_number").prop("value", "0");
@@ -975,8 +981,9 @@ $(document).ready(function(){
 						break;					
 				}		
 			/*Подсчет суммы за цветники*/
-			var cve = cvetnik_cost * numberс;
+			cve = cvetnik_cost * numberс;
 			$("#cvetnik_sum").val(cve);
+			ordCheck(cve);
 		});	
 	/*ЦВЕТНИК - ОКОНЧАНИЕ*/
 
@@ -1165,22 +1172,25 @@ $(document).ready(function(){
 					break;		
 			}
 			/*Подсчет суммы за цветники*/
-			var prik = priklad_cost * numberpr;
+			prik = priklad_cost * numberpr;
 			$("#priklad_sum").val(prik);
+			ordCheck(prik);
 		});
 	/*ПРИКЛАДНАЯ - ОКОНЧАНИЕ*/
 
-	/*CБОР ИТОГОВОЙ СУММЫ*/
-	$(".order_presum").on('input', '[data-action="text"]', function () {
-		var stela_sum = $("#stela_sum").val();
-		var sum = $("#sum").val();
-		var cvetnik_sum = $("#cvetnik_sum").val();
-		var priklad_sum = $("#priklad_sum").val();
-		var itog = stela_sum + sum + cvetnik_sum + priklad_sum;
-		$("#itog_memo").val(itog);
-	});
-	
-	
+	/*CБОР ИТОГОВОЙ СУММЫ*/		
+	$("#memorial_order").on("click", function(){				
+		var order_sum = 0;		
+		$(".order_presum").each(function(){				
+			priklad_sum = parseInt($("#priklad_sum").val());
+			cvetnik_sum = parseInt($("#cvetnik_sum").val());
+			sum = parseInt($("#sum").val());
+			stela_sum = parseInt($("#stela_sum").val()); 
+			order_sum=priklad_sum+cvetnik_sum+sum+stela_sum;
+			
+		});
+		$("#itog_memo").val(order_sum);
+		});
 
 
 
