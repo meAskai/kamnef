@@ -796,14 +796,14 @@ $(document).ready(function(){
 					case "600*50*80":
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {					
-							cvetnik_cost = 261;
+							cvetnik_cost = 186;
 						} else if (pocv == "all") {
 							cvetnik_cost = 328;
 						};
 						$(".polirovka_cvet").change(function(){
 							var pocv = $(".polirovka_cvet").val();
 							if (pocv == "once") {
-								cvetnik_cost = 261;
+								cvetnik_cost = 186;
 							} else if (pocv == "all") {
 								cvetnik_cost = 328;
 							}; 
@@ -813,38 +813,21 @@ $(document).ready(function(){
 					case "800*60*80":
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {					
-							cvetnik_cost = 388;
+							cvetnik_cost = 285;
 						} else if (pocv == "all") {
-							cvetnik_cost = 478;
+							cvetnik_cost = 375;
 						};
 						$(".polirovka_cvet").change(function(){
 							var pocv = $(".polirovka_cvet").val();
 							if (pocv == "once") {
-								cvetnik_cost = 388;
+								cvetnik_cost = 285;
 							} else if (pocv == "all") {
-								cvetnik_cost = 478;
+								cvetnik_cost = 375;
 							}; 
 						});
 						break;	
 
 					case "900*60*80":
-						var pocv = $(".polirovka_cvet").val();
-						if (pocv == "once") {					
-							cvetnik_cost = 437;
-						} else if (pocv == "all") {
-							cvetnik_cost = 538;
-						};
-						$(".polirovka_cvet").change(function(){
-							var pocv = $(".polirovka_cvet").val();
-							if (pocv == "once") {
-								cvetnik_cost = 437;
-							} else if (pocv == "all") {
-								cvetnik_cost = 538;
-							}; 
-						});
-						break;	
-
-					case "900*80*80":
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {					
 							cvetnik_cost = 321;
@@ -857,6 +840,23 @@ $(document).ready(function(){
 								cvetnik_cost = 321;
 							} else if (pocv == "all") {
 								cvetnik_cost = 422;
+							}; 
+						});
+						break;	
+
+					case "900*80*80":
+						var pocv = $(".polirovka_cvet").val();
+						if (pocv == "once") {					
+							cvetnik_cost = 360;
+						} else if (pocv == "all") {
+							cvetnik_cost = 461;
+						};
+						$(".polirovka_cvet").change(function(){
+							var pocv = $(".polirovka_cvet").val();
+							if (pocv == "once") {
+								cvetnik_cost = 360;
+							} else if (pocv == "all") {
+								cvetnik_cost = 461;
 							}; 
 						});
 						break;
@@ -1021,16 +1021,16 @@ $(document).ready(function(){
 				case "500*50*80":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 218;
+							priklad_cost = 155;
 						} else if (pocv == "all") {
-							priklad_cost = 280;
+							priklad_cost = 217;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 218;
+							priklad_cost = 155;
 						} else if (pocv == "all") {
-							priklad_cost = 280;
+							priklad_cost = 217;
 						}; 
 					});
 					break;
@@ -1038,16 +1038,16 @@ $(document).ready(function(){
 				case "500*60*80":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 243;
+							priklad_cost = 178;
 						} else if (pocv == "all") {
-							priklad_cost = 306;
+							priklad_cost = 241;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 243;
+							priklad_cost = 178;
 						} else if (pocv == "all") {
-							priklad_cost = 306;
+							priklad_cost = 241;
 						}; 
 					});
 					break;
@@ -1055,16 +1055,16 @@ $(document).ready(function(){
 				case "600*60*80":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 291;
+							priklad_cost = 214;
 						} else if (pocv == "all") {
-							priklad_cost = 365;
+							priklad_cost = 288;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 291;
+							priklad_cost = 214;
 						} else if (pocv == "all") {
-							priklad_cost = 365;
+							priklad_cost = 288;
 						}; 
 					});
 					break;
@@ -1072,16 +1072,16 @@ $(document).ready(function(){
 				case "600*80*80":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 321;
+							priklad_cost = 240;
 						} else if (pocv == "all") {
-							priklad_cost = 397;
+							priklad_cost = 316;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 321;
+							priklad_cost = 240;
 						} else if (pocv == "all") {
-							priklad_cost = 397;
+							priklad_cost = 316;
 						}; 
 					});
 					break;
@@ -1089,16 +1089,16 @@ $(document).ready(function(){
 				case "700*80*80":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 375;
+							priklad_cost = 280;
 						} else if (pocv == "all") {
-							priklad_cost = 462;
+							priklad_cost = 367;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 375;
+							priklad_cost = 280;
 						} else if (pocv == "all") {
-							priklad_cost = 462;
+							priklad_cost = 367;
 						}; 
 					});
 					break;
@@ -1106,16 +1106,16 @@ $(document).ready(function(){
 				case "700*80*100":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 441;
+							priklad_cost = 308;
 						} else if (pocv == "all") {
-							priklad_cost = 550;
+							priklad_cost = 417;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 441;
+							priklad_cost = 308;
 						} else if (pocv == "all") {
-							priklad_cost = 550;
+							priklad_cost = 417;
 						}; 
 					});
 					break;
@@ -1123,16 +1123,16 @@ $(document).ready(function(){
 				case "800*80*100":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 504;
+							priklad_cost = 352;
 						} else if (pocv == "all") {
-							priklad_cost = 627;
+							priklad_cost = 475;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 504;
+							priklad_cost = 352;
 						} else if (pocv == "all") {
-							priklad_cost = 627;
+							priklad_cost = 475;
 						}; 
 					});
 					break;
@@ -1140,16 +1140,16 @@ $(document).ready(function(){
 				case "800*100*100":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 592;
+							priklad_cost = 405;
 						} else if (pocv == "all") {
-							priklad_cost = 718;
+							priklad_cost = 531;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 592;
+							priklad_cost = 405;
 						} else if (pocv == "all") {
-							priklad_cost = 718;
+							priklad_cost = 531;
 						}; 
 					});
 					break;
@@ -1157,16 +1157,16 @@ $(document).ready(function(){
 				case "900*100*100":
 					var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 666;
+							priklad_cost = 456;
 						} else if (pocv == "all") {
-							priklad_cost = 806;
+							priklad_cost = 596;
 						};
 					$(".polirovka_cvet").change(function(){
 						var pocv = $(".polirovka_cvet").val();
 						if (pocv == "once") {
-							priklad_cost = 666;
+							priklad_cost = 456;
 						} else if (pocv == "all") {
-							priklad_cost = 806;
+							priklad_cost = 596;
 						}; 
 					});
 					break;		
@@ -1187,9 +1187,12 @@ $(document).ready(function(){
 			sum = parseInt($("#sum").val());
 			stela_sum = parseInt($("#stela_sum").val()); 
 			order_sum=priklad_sum+cvetnik_sum+sum+stela_sum;
+			nubmer = order_sum,
+    		format = String(nubmer).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+    		order_suma=format;
 			
 		});
-		$("#itog_memo").val(order_sum);
+		$("#itog_memo").val(order_suma);
 		});
 
 

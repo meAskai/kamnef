@@ -294,41 +294,42 @@ body {
 		bottom: 0%;
 	}
 /*БОКОВЕ МЕНЮ*/
-.left_aside {
-	background-color: #43484C;
-	width: 100%;
-	padding: 0px;
-}
-.left_aside ul{
-	width: 100%;
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+	.left_aside {
+		width: 100%;
+		padding: 0px;
+	}
+	.left_aside ul{
+		width: 100%;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
 
-}
-.left_aside ul li{
-	line-height: 41px;
-	border: 1px #E8E8E8 solid;
-	font-size: 16px;
+	}
+	.left_aside li{	
+		background-color: #43484C;
+		line-height: 41px;
+		font-size: 16px;
+		margin: 2px;
 
 
-}
-.left_aside a{
-	color: #CFEDE4;
-	display: block;
-	padding: 10px;
+	}
+	.left_aside a{
+		color: #CFEDE4;
+		display: block;
+		padding: 10px;
 
-}
-.left_aside li:hover {
-	background-color: #585D61;	
-	border: 4px #E8E8E8 solid;
-	-webkit-transition: all .20s;
-	-o-transition: all .20s;
-	transition: all .20s;
-}
-.category_active {
-	background-color: #585D61;	
-}
+	}
+	.left_aside li:hover {
+		background-color: #585D61;
+		margin: 5px;
+		-webkit-transition: all .20s;
+		-o-transition: all .20s;
+		transition: all .20s;
+	}
+	.category_active {
+
+		background-color: #585D61;
+	}
 
 /*СХЕМА РАБОТЫ*/
 	
@@ -365,15 +366,163 @@ body {
 	}
 	
 /*ФУТЕР*/
+	footer {
+		max-height: 100px;
+		min-height: 50px;
+		color: #CFEDE4;
+		background-color: #43484C;
+	}
 
-footer {
-	max-height: 100px;
-	min-height: 50px;
-	color: #CFEDE4;
-	background-color: #43484C;
-}
 
 /*КАЛЬКУЛЯТОР*/
-.category_order {
+	.top_content {
+	}
+	.category_order{
+		color: #CFEDE4;
+	}
+
+	/*Инпуты*/
+	.order_number {
+		width: 75px;
+	    border: 2px #fff solid;
+	    background-color: transparent;
+	    color: #CFEDE4;
+	    text-align: center;
+	}
+	.order_presum {
+		width: 100px;
+		border: transparent;
+		background-color: transparent;
+		color: #CFEE94;
+		text-align: right;
+		font-size: 18px;
+		border-bottom: 1px #fff solid;
+	}
+	.order_sum {
+		width: 150px;
+		border: transparent;
+		background-color: transparent;
+		color: #CFEDE4;
+		text-align: right;
+		font-size: 30px;
+		margin: 0;		
+	}
+	.select_order {
+		width: 150px;
+	    border: 2px #fff solid;
+	    background-color: transparent;	    
+	    color: #CFEDE4;
+	    text-align: center;
+		/*Меняем стрелочку для селекта на свою*/
+		  -webkit-appearance: none;
+		  background-image: url('../img/point2.png');
+		  background-position: right 5px center;
+		  background-repeat: no-repeat;
+		  /* for FF */
+		  -moz-appearance: none;
+		  text-indent: 0.01px; 
+		  text-overflow: '';
+		  /* for IE */
+		  -ms-appearance: none;
+		  appearance: none!important;
+	}
+	.polir_order {
+		width: 150px;
+	    border: 1px #fff solid;
+	    background-color: transparent;	    
+	    color: #CFEDE4;
+	    text-align: center;
+	    /*Меняем стрелочку для селекта на свою*/
+		  -webkit-appearance: none;
+		  background-image: url('../img/point2.png');
+		  background-position: right 5px center;
+		  background-repeat: no-repeat;
+		  /* for FF */
+		  -moz-appearance: none;
+		  text-indent: 0.01px; 
+		  text-overflow: '';
+		  /* for IE */
+		  -ms-appearance: none;
+		  appearance: none!important;
+	}
+	option{
+		background: #325064;
+		
+	}
 	
-}
+	
+	.one {
+		color: #CFEE94;
+		text-transform: uppercase;
+		font-size: 23px;
+		padding: 0px;
+	}
+	.two {
+		margin-right: 10px;
+	}
+	.three {
+		color: #CFEE94;
+		text-transform: uppercase;
+		padding-left: 50px;
+		padding-right: 10px;
+	}
+	.four{
+		color: #CFEE94;
+		text-transform: uppercase;
+		font-size: 23px;
+		padding: 0px;
+	}
+
+	/*Инпуты-закрытие*/
+
+
+	.category_order h3 {
+	text-transform: uppercase;	
+	color: #CFEE94;
+	}		
+	.category_order {		
+		background-color: rgba(22, 37, 49, .7);
+		color: #CFEDE4;
+		padding: 0px;
+		margin: 0px;
+	}	
+	.category_order i{
+		color: #CFEDE4;
+		font-size: 20px;
+		margin: 10px;
+	}
+	.category_order select {
+		
+	}
+	.block_order {
+		background-color: rgba(22, 37, 52, 0.4);
+	    padding: 6px 21px;
+	    margin-bottom: 8px;
+	    
+	}
+
+	.content_calc {
+		background-image: url(../img/fon5.jpg);
+		width: 100%;
+		height: auto;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+	.category_line {
+		margin: 20px 0px;
+	}
+	.polirovka_line {
+		padding-top: 10px;
+	}
+	.itog_line i {
+		font-size: 30px;
+		color: red;
+	}
+	.itog_line {
+		padding: 10px;
+	}
+	#polir_descr{
+		margin-left: 5px;
+		font-style: italic;
+	}
+
