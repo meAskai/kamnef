@@ -51,7 +51,9 @@ body {
 }
 
 /*МЕНЮ*/
-
+	header {
+		position: relative;
+	}
 	.button_contacts {
 		background-color: transparent;
 		border: medium none;
@@ -71,10 +73,48 @@ body {
 		top: 35px;
 		left: -4px;
 		display: block;
-
 	}
 
-	
+	/*КОРЗИНА*/
+	.button_cart {
+	    background: transparent;
+	    border: none;
+	    color: #FE6748;
+	    font-size: 40px;
+	    float: right;
+	    position: relative;	   
+	}
+	.button_cart span{
+	    color: #fff;
+	    font-size: 11px;
+	    position: absolute;
+	    right: -1px;
+	    padding: 3px;
+	    background-color: #FE6748;
+	    border-radius: 1em;
+	    border: 2px #fff solid;
+	    display: none;
+	}
+	.show_price {
+	    position: absolute;
+	    background-color: #CFEEC5;
+	    right: 1px;
+	    margin-top: 57px;
+	    padding: 25px;
+	    z-index: 10;
+	    border: 2px solid #43484C;
+	    display: none;
+	}
+	.show_price p {
+	    margin: 6px;
+	    line-height: 2;
+	}
+	.show_price span {
+    font-size: 16px;
+    text-align: right;
+}
+	/*КОРЗИНА - ОКОНЧАНИЕ*/	
+
 	.header_topline {
 		background-color: #43484C;
 		line-height: 35px;
@@ -88,12 +128,13 @@ body {
 	}
 
 	.top_contacts{
-		float: right;
+		text-align: right;
 		color: #CFEDE4;
-		padding-bottom: 5px;
-		padding: 10px;
+		line-height: 45px;
+		margin-top: 5px;
 		z-index: 15;
 	}
+	
 	.top_contacts a{
 		color: #CFEDE4;
 		display: block;
@@ -136,7 +177,6 @@ body {
 
 	}
 	.menu_main a{
-
 		padding: 7px;
 		color: #fff;
 		/*Чтобы при наведении мышкой цвет менялся плавно*/
@@ -145,6 +185,10 @@ body {
 		transition: all .25s;
 	}
 	.menu_main a:hover {
+	}
+	.menu_main i {
+		display: inline-block;
+		color: red;
 	}
 	.list {
 		background-color: #43484C;
@@ -326,10 +370,6 @@ body {
 		-o-transition: all .20s;
 		transition: all .20s;
 	}
-	.category_active {
-
-		background-color: #585D61;
-	}
 
 /*СХЕМА РАБОТЫ*/
 	
@@ -375,11 +415,6 @@ body {
 
 
 /*КАЛЬКУЛЯТОР*/
-	.top_content {
-	}
-	.category_order{
-		color: #CFEDE4;
-	}
 
 	/*Инпуты*/
 	.order_number {
@@ -483,24 +518,18 @@ body {
 	.category_order {		
 		background-color: rgba(22, 37, 49, .7);
 		color: #CFEDE4;
-		padding: 0px;
-		margin: 0px;
+		padding: 1px;
 	}	
 	.category_order i{
 		color: #CFEDE4;
 		font-size: 20px;
 		margin: 10px;
 	}
-	.category_order select {
-		
-	}
 	.block_order {
 		background-color: rgba(22, 37, 52, 0.4);
 	    padding: 6px 21px;
-	    margin-bottom: 8px;
-	    
+	    margin-bottom: 8px;	    
 	}
-
 	.content_calc {
 		background-image: url(../img/fon5.jpg);
 		width: 100%;

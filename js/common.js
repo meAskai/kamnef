@@ -8,6 +8,10 @@ $(document).ready(function() {
 		$(".menu_main").slideToggle();
 	});
 
+	$(".button_cart").click(function(){
+		$(".show_price").slideToggle();
+	});
+
 	//Таймер обратного отсчета
 	//Документация: http://keith-wood.name/countdown.html
 	//<div class="countdown" date-time="2015-01-07"></div>

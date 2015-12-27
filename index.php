@@ -36,60 +36,16 @@
 </head>
 <body>
 
-<header class="top_header">
-	<div class="header_topline">
-		<div class="container">	
-			
-
-				<!--Логотип-->
-				<div class="col-md-12">
-					
-					<img src="images/bg1.png" alt="logo">
-					
-						<div class="row">
-					<!--Контакты-->	
-							<button class="button_contacts hidden-lg hidden-md hidden-sm"><i class="fa fa-mobile"></i></button>
-							<div>
-								<div class="top_contacts">
-									<a href="#callback" class="callback fancybox">Заказать обратный звонок</a>
-									<p>8 (953) 999-99-99</p>
-								</div>
-							</div>
-							<div class="col-md-7 col-md-offset-5">
-								<button class="button_menu hidden-lg hidden-md hidden-sm"><i class="fa fa-bars"></i></button>
-								<nav class="menu_main clearfix">
-									<ul>
-										<li><a href="http://kamnef/" class="active list">Главная</a></li>
-										<li><a href="#" class="list">Продукция</a></li>
-										<li><a href="#"  class="list">Схема работы</a></li>
-										<li><a href="#" class="button">Сделать заказ</a></li>
-									</ul>
-								</nav>
-							</div>	
-						</div>
-				</div>			
-		</div>			
-	</div>				
-</header>
+<?php 
+	include "header.php";
+?>
 
 <section class="slider">
 	<div class="container">
 			<div class="col-md-3">
-							
-			<aside class="left_aside">
-				<ul>
-					<li><a href="#">Гранитная плитка</a></li>
-					<li><a href="#">Тротуарная плитка</a></li>
-					<li><a href="#">Плитка для бани и сауны</a></li>
-					<li><a href="#">Облицовка для банных печей</a></li>
-					<li><a href="http://kamnef/catalog/memorial.php">Памятники</a></li>
-					<li><a href="#">Бордюр</a></li>
-					<li><a href="#">Брусчатка</a></li>
-					<li><a href="#">Цокольный камень</a></li>
-					<li><a href="#">Камни для бани и сауны</a></li>
-					<li><a href="#">Слэбы / Корки</a></li>
-				</ul>
-			</aside>
+				<?php
+					include "aside.php";
+				?>		
 			</div>
 		<div class="col-md-9">
 			<div class="slider_container">
@@ -147,9 +103,10 @@
 	</form>
 </div>
 
-<footer>
-	
-</footer>
+<?php 
+	include "footer.php";
+?>
+
 	
 
 
