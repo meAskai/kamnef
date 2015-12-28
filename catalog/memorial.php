@@ -262,7 +262,7 @@
 							<input type="text" name="order_sum" class="order_sum" id="itog_memo" value="0" readonly> <i class="fa fa-rub"></i>
 						</div>
 						<div class="col-md-5">
-							<button type="submit" name="submit" class="button">Сделать заказ</button>
+							<a class="button memorial_add">Сделать заказ</a>
 						</div>
 					</div>
 					</div>

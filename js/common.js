@@ -99,7 +99,37 @@ $(document).ready(function() {
 		return false;
 	});
 
+	/*$(".podstavka_size").change(function(){
+			$("#stela_number").val(23)
+			$(".up_count").text(233);	
+		});*/	
+	
 
+	//Счетчик товаров и цен для корзины
+	$(".memorial_add").click(function(){
+
+		up_count = parseInt($(".up_count").text());
+
+		//Если в корзине 1 и более товаров, то иконка с количеством товара загорается
+		/*if (up_count > 0) {
+			$(".up_count").show();
+		} else {
+			$(".up_count").hide();
+		}*/
+
+		$(".order_number").each(function(){
+			stela_number = parseInt($("#stela_number").val());
+			podstavka_number = parseInt($("#podstavka_number").val());
+			cvetnik_number = parseInt($("#cvetnik_number").val());
+			priklad_number = parseInt($("#priklad_number").val());
+			count_number = stela_number+podstavka_number+cvetnik_number+priklad_number;
+			
+		});
+		newnumber = up_count + count_number;
+		$(".count").text(newnumber);
+		$("#memorial_order").trigger("reset");
+
+	}); 
 
 		
 });

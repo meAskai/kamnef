@@ -17,7 +17,7 @@
 							<p>8 (953) 999-99-99</p>
 
 						</div>
-						<button class="button_cart" alt="Ваша корзина"><i class="fa fa-shopping-cart"><span class="count">0</span></i></button>
+						<button class="button_cart" alt="Ваша корзина"><i class="fa fa-shopping-cart"><span class="count up_count">0</span></i></button>
 						
 						<!-- begin show_price -->
 						<div class="show_price">

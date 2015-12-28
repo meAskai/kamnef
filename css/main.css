@@ -84,7 +84,7 @@ body {
 	    float: right;
 	    position: relative;	   
 	}
-	.button_cart span{
+	.up_count{
 	    color: #fff;
 	    font-size: 11px;
 	    position: absolute;
@@ -93,11 +93,11 @@ body {
 	    background-color: #FE6748;
 	    border-radius: 1em;
 	    border: 2px #fff solid;
-	    display: none;
+	    display: inline;
 	}
 	.show_price {
 	    position: absolute;
-	    background-color: #CFEEC5;
+	    background-color: #E8E8E8;
 	    right: 1px;
 	    margin-top: 57px;
 	    padding: 25px;
@@ -112,7 +112,7 @@ body {
 	.show_price span {
     font-size: 16px;
     text-align: right;
-}
+	}
 	/*КОРЗИНА - ОКОНЧАНИЕ*/	
 
 	.header_topline {
@@ -510,6 +510,9 @@ body {
 
 	/*Инпуты-закрытие*/
 
+	.itog_line a {
+		vertical-align: middle;
+	}
 
 	.category_order h3 {
 	text-transform: uppercase;	
