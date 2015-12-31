@@ -22,7 +22,7 @@
 						<!-- begin show_price -->
 						<div class="show_price">
 							<p>Товаров: <span class="count">0</span></p>
-							<p>На сумму: <span price="0" class="price">0 <i class="fa fa-rub"></i></span></p>
+							<p>На сумму: <span price="0" class="price">0 руб.</span></p>
 							<a href="#" class="button">В корзину</a>	
 						</div>
 						<!-- end show_price -->

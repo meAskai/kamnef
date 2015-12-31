@@ -99,16 +99,17 @@ $(document).ready(function() {
 		return false;
 	});
 
-	/*$(".podstavka_size").change(function(){
-			$("#stela_number").val(23)
-			$(".up_count").text(233);	
-		});*/	
-	
+	$(".podstavka_size").change(function(){
+			
+		});	
+
 
 	//Счетчик товаров и цен для корзины
-	$(".memorial_add").click(function(){
-
+	$(".memorial_add").on("click", function(){
 		up_count = parseInt($(".up_count").text());
+		
+		
+		price = parseInt($(".price").text());
 
 		//Если в корзине 1 и более товаров, то иконка с количеством товара загорается
 		/*if (up_count > 0) {
@@ -118,18 +119,70 @@ $(document).ready(function() {
 		}*/
 
 		$(".order_number").each(function(){
-			stela_number = parseInt($("#stela_number").val());
-			podstavka_number = parseInt($("#podstavka_number").val());
-			cvetnik_number = parseInt($("#cvetnik_number").val());
-			priklad_number = parseInt($("#priklad_number").val());
+
+			stela_numberA = parseInt($("#stela_number").val());
+			//проверяем, если никакой размер детали не выбран,
+			//то колчество будет равно нулю
+			var stela_size = $(".stela_size").val();
+			if (stela_size != 0) {
+				stela_number = stela_numberA;
+			}else{
+				stela_number = 0;
+			}
+
+			podstavka_numberA = parseInt($("#podstavka_number").val());
+			var podstavka_size = $(".podstavka_size").val();
+			if (podstavka_size != 0) {
+				podstavka_number = podstavka_numberA;
+			}else{
+				podstavka_number = 0;
+			}
+
+			cvetnik_numberA = parseInt($("#cvetnik_number").val());
+			var	cvetnik_size = $(".cvetnik_size").val();
+			if (cvetnik_size != 0) {
+				cvetnik_number = cvetnik_numberA;
+			}else{
+				cvetnik_number = 0;
+			}
+
+			priklad_numberA = parseInt($("#priklad_number").val());
+			var priklad_size = $(".priklad_size").val();
+			if (priklad_size != 0) {
+				priklad_number = priklad_numberA;
+			}else{
+				priklad_number = 0;
+			}
+
 			count_number = stela_number+podstavka_number+cvetnik_number+priklad_number;
 			
 		});
+
+		newprice = price + order_summ;
 		newnumber = up_count + count_number;
 		$(".count").text(newnumber);
+		$(".price").text(newprice + " руб.");
 		$("#memorial_order").trigger("reset");
-
+		co = parseInt($(".count").text());
+		if (co != 0) {
+			$(".up_count").show();
+		}else{
+			$(".up_count").hide();
+		}
 	}); 
 
+
+
+	// Плавающая шапка
+  	$h = $(".header_topline").offset().top;
+	$(window).scroll(function(){
+        // Если прокрутили скролл ниже макушки блока, включаем фиксацию
+		if ( $(window).scrollTop() > $h) {
+        	$(".header_topline").css({"position":"fixed"});
+        }else{
+            //Иначе возвращаем всё назад. Тут вы вносите свои данные
+        	$(".header_topline").css({"position":"relative"});
+        }
+  	});
 		
 });

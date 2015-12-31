@@ -51,6 +51,15 @@ body {
 }
 
 /*МЕНЮ*/
+	.header_topline {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background-color: #43484C;
+
+	}
 	header {
 		position: relative;
 	}
@@ -93,7 +102,7 @@ body {
 	    background-color: #FE6748;
 	    border-radius: 1em;
 	    border: 2px #fff solid;
-	    display: inline;
+	    display: none;
 	}
 	.show_price {
 	    position: absolute;
@@ -112,13 +121,11 @@ body {
 	.show_price span {
     font-size: 16px;
     text-align: right;
+    color: #FE6748;
 	}
 	/*КОРЗИНА - ОКОНЧАНИЕ*/	
 
-	.header_topline {
-		background-color: #43484C;
-		line-height: 35px;
-	}
+	
 	.header_topline img{
 		max-width: 50%;
 		display: block;
@@ -556,5 +563,8 @@ body {
 	#polir_descr{
 		margin-left: 5px;
 		font-style: italic;
+	}
+	.memorial_add {
+		cursor: pointer;
 	}
 

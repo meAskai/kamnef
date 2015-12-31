@@ -1187,11 +1187,13 @@ $(document).ready(function(){
 			sum = parseInt($("#sum").val());
 			stela_sum = parseInt($("#stela_sum").val()); 
 			order_sum=priklad_sum+cvetnik_sum+sum+stela_sum;
-			nubmer = order_sum,
+			nubmer = order_sum;
+			order_summ = order_sum;
     		format = String(nubmer).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     		order_suma=format;
 			
 		});
+
 		$("#itog_memo").val(order_suma);
 		});
 
