@@ -1,9 +1,9 @@
 <?php 
 
 	$db_host = 'localhost';
-	$db_user = '';
-	$db_pass = '';
-	$db_database = '';
+	$db_user = 'kamnef';
+	$db_pass = 'gtnhrfvyta';
+	$db_database = 'kamnef';
 
 	$link = mysql_connect($db_host, $db_user, $db_pass);
 

@@ -7,7 +7,7 @@
 				<!--Логотип-->
 				<div class="row">	
 				<div class="col-md-12">								
-					<img src="../images/bg1.png" alt="Интернет-магазин камня и плитки">	
+					<a href="http://kamnef/"></div><img src="../images/bg1.png" alt="Интернет-магазин камня и плитки"></a>	
 						
 					<!--Контакты-->	
 						<button class="button_contacts hidden-lg hidden-md hidden-sm"><i class="fa fa-mobile"></i></button>
@@ -23,7 +23,7 @@
 						<div class="show_price">
 							<p>Товаров: <span class="count">0</span></p>
 							<p>На сумму: <span price="0" class="price">0 руб.</span></p>
-							<a href="#" class="button">В корзину</a>	
+							<a href="../cart.php?action=oneclick" class="button">В корзину</a>	
 						</div>
 						<!-- end show_price -->
 
@@ -44,5 +44,15 @@
 					</div>
 				</div>			
 		</div>			
-	</div>				
+	</div>
+	<div class="hidden">
+	<!--Отправка почты настраивается по #callback, который мы добавляем в форму отправки в файле common.js-->
+	<form id="callback" class="pop_form">
+		<h3>Заказать обратный звонок</h3>
+		<!--Обязательные поля атрибут required -->
+		<input type="text" name="name" placeholder="Ваше имя..." required/>
+		<input type="text" name="phone" placeholder="Ваш телефон..." required/>
+		<button class="button" type="submit">Заказать</button>
+	</form>
+</div>				
 </header>

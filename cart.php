@@ -1,6 +1,7 @@
 <?php
 	include("handlers/db_connect.php");
 ?>
+
 <!DOCTYPE html>
 <!-- Для совместимости Эксплорера разлычных версий-->
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -11,7 +12,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>K A M N E F</title>
+	<title>K A M N E F | Корзина</title>
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<!-- Вьюпорт для адаптивности сайта -->
@@ -32,8 +33,7 @@
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
-	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-	<link rel="icon" href="/favicon.png" type="image/x-icon">
+	
 </head>
 <body>
 
@@ -41,76 +41,163 @@
 	include "header.php";
 ?>
 
-<section class="slider">
+<!-- begin top_content -->
+<div class="top_content">
 	<div class="container">
-			<div class="col-md-3">
-				<?php
-					include "aside.php";
-				?>		
-			</div>
-		<div class="col-md-9">
-			<div class="slider_container">
-
-				<div class="next_button"><i class="fa fa-angle-right"></i></div>
-				<div class="prev_button"><i class="fa fa-angle-left"></i></div>
-				
-				<div class="carousel">
-					<div class="slide_item"><img src="images/1.gif" alt="#"></div>
-					<div class="slide_item"><img src="images/3.png" alt="#"></div>
-					<div class="slide_item"><img src="images/1.png" alt="#"></div>
-					<div class="slide_item"><img src="images/2.png" alt="#"></div>
-					<div class="slide_item"><img src="images/2.gif" alt="#"></div>
-					<div class="slide_item"><img src="images/1.jpg" alt="#"></div>
-					<div class="slide_item"><img src="images/1.jpeg" alt="#"></div>
-					
-				</div>
-				<div class="utp">
-						<!--<h3>Преимущества:</h3>
-						<p><i class="fa fa-check-square-o "></i>Отличные цены</p>
-						<p><i class="fa fa-check-square-o"></i>Работаем напрямую с производителями</p>
-						<p><i class="fa fa-check-square-o"></i>Тут надо ещё подумать, что написать</p> -->
-						<a href="#" class="button">Сделать заказ</a>
-					</div>
-			</div>	
-			
-		</div>			
-			
-	</div>
-</section>
-
-<section class="icons">
-	<div class="container">
-	<h3>Cхема работы</h3>
-		<div class="col-md-12">
-			<ul>
-				<li><i class="fa fa-hand-o-up"></i> 1. Выбираете продукт</li>
-				<li><i class="fa fa-shopping-cart"></i> 2. Оформляете заказ</li>
-				<li><i class="fa fa-check"></i> 3. Мы звоним для подтверждения</li>
-				<li><i class="fa fa-truck  fa-flip-horizontal"></i>	 4. Товар уже в пути</li>
-			</ul>
+		<div class="col-md-3">		
+			<!--БОКОВОЕ МЕНЮ-->					
+			<?php
+				include "aside.php";
+			?>
 		</div>
+	
+	
+	<div class="col-md-9">
+	
+			
+		<h3>Корзина покупок</h3>
+	<!-- begin cart_interface -->
+	<div class="cart_interface">	
+		<?php 
+							
+		$action = strip_tags($_GET["action"]);
+			switch ($action) {
+				case 'oneclick':
+					echo '
+
+					';
+
+		//Запрос к БД для вывода товаров из таблицы "Корзина". 
+		//Вытаскаваем значения
+		//с конкретным ip адресом, который получаем у глобального сервера			
+		$result = mysql_query("SELECT * FROM memorial, cart
+						 WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' 
+						 AND memorial.memo_id=cart.cart_id_product", $link);
+		if (mysql_num_rows($result) >0)
+		{
+			$row = mysql_fetch_array($result);
+
+			do
+			{
+				//int - пересчитываем цены * количество товара
+				$int = $row["cart_price"] * $row["cart_count"];
+				$all_price = $all_price + $int;
+				//Подгоняем все картинки под определенный размер
+				if  (strlen($row["image"]) > 0 && file_exists("./images/".$row["image"]))
+				{
+					$img_path = './images/'.$row["image"];
+					$max_width = 100; 
+					$max_height = 100; 
+					 list($width, $height) = getimagesize($img_path); 
+					$ratioh = $max_height/$height; 
+					$ratiow = $max_width/$width; 
+					$ratio = min($ratioh, $ratiow); 
+
+					$width = intval($ratio*$width); 
+					$height = intval($ratio*$height);    
+					}else
+					{
+					$img_path = "./images/noimages.jpeg";
+					$width = 120;
+					$height = 105;
+				}
+
+				echo '
+				<div class="tovar_line">
+				<div class="row">
+				<div class="container">
+
+					<div class="col-md-1">
+					<div class="cart_image">
+						<img src="'.$img_path.'" width="'.$width.'" height="'.$height.'" />
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="cart_title">
+						<p><strong>'.$row["memo_name"].'</strong></p>
+						<p class="cart_features">'.$row["memo_features"].'</p>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="input_count_style">
+							<li>
+								<button class="count_minus">
+								<i class="fa fa-minus"></i>
+								</button>
+							</li>
+							<li>
+								<input class="count_input" type="text" value="'.$row["cart_count"].'"/>
+							</li>
+							<li>
+								<button class="count_plus">
+								<i class="fa fa-plus"></i>
+								</button>
+							</li>
+						</ul>	
+					</div>
+
+					<div class="col-md-2">
+					<div class="price_product">
+						<h5><span class="span_count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span>
+						</h5>
+						<p> '.$int.' руб.</p>
+					</div>
+					</div>
+
+					<div class="col-md-1">
+					<div class="delete_cart"><a href=""><i class="fa fa-ban"></i></a>
+					</div>
+					</div>						
+
+				</div>
+				</div>
+				</div>
+			';
+
+			} while ($row = mysql_fetch_array($result));
 		
-	</div>
-</section>
+		echo '
+			
+			<div class="row">
+			<div class="col-md-9">
+			 <p class="itog-price" align="left">Итого: <strong>'.$all_price.'</strong> руб.</p>
+			 <a href="cart.php?action=confirm" class="button" >Оформить заказ</a> 
+			 </div>
+			 
+			 </div>
+			 ';
+  
+		} 
+		else
+		{
+		    echo '<h3 id="clear-cart" align="center">Тут ещё пусто -(</h3>';
+		}
+			
+			break;
+		default:
+			# code...
+			break;
+	}
+?>
+</div>
+<!-- end cart_interface -->
+</div>	
+</div>
+</div>
+
+		
 
 <?php 
 	include "footer.php";
 ?>
 
-	
 
 
 
 
-
-
-
-
-
-
-
-
-	<div class="hidden"></div>
+<div class="hidden"></div>
 	<!-- Mandatory for Responsive Bootstrap Toolkit to operate -->
 	<div class="device-xs visible-xs"></div>
 	<div class="device-sm visible-sm"></div>

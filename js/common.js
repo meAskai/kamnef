@@ -9,7 +9,10 @@ $(document).ready(function() {
 	});
 
 	$(".button_cart").click(function(){
-		$(".show_price").slideToggle();
+		var b = $(".button_cart");
+		var top = b.position().top;
+		$(".show_price").css("top", top).slideToggle();
+		
 	});
 
 	//Таймер обратного отсчета
@@ -184,5 +187,6 @@ $(document).ready(function() {
         	$(".header_topline").css({"position":"relative"});
         }
   	});
+
 		
 });

@@ -1,4 +1,5 @@
 <?php
+	include("../handlers/db_connect.php");
 ?>
 <!DOCTYPE html>
 <!-- Для совместимости Эксплорера разлычных версий-->
@@ -39,16 +40,7 @@
 	include "../header.php";
 ?>
 
-<div class="hidden">
-	<!--Отправка почты настраивается по #callback, который мы добавляем в форму отправки в файле common.js-->
-	<form id="callback" class="pop_form">
-		<h3>Заказать обратный звонок</h3>
-		<!--Обязательные поля атрибут required -->
-		<input type="text" name="name" placeholder="Ваше имя..." required/>
-		<input type="text" name="phone" placeholder="Ваш телефон..." required/>
-		<button class="button" type="submit">Заказать</button>
-	</form>
-</div>
+
 
 <!-- begin top_content -->
 <div class="top_content">
@@ -277,7 +269,6 @@
 <?php 
 	include "../footer.php";
 ?>
-
 <div class="hidden"></div>
 	<!-- Mandatory for Responsive Bootstrap Toolkit to operate -->
 	<div class="device-xs visible-xs"></div>
@@ -309,9 +300,10 @@
 	<script src="../libs/maskedinput/jquery.maskedinput.min.js"></script>
 	<script src="../libs/equalheight/jquery.equalheight.js"></script>
 	<script src="../libs/stellar/jquery.stellar.min.js"></script>
+	<script src="../libs/jquery.cookie.min.js"></script>
 	<script src="../js/common.js"></script>
 	<script src="../js/stela_calculation.js"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
-	</body>
+</body>
 </html>

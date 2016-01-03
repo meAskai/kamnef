@@ -107,25 +107,94 @@ body {
 	.show_price {
 	    position: absolute;
 	    background-color: #E8E8E8;
-	    right: 1px;
 	    margin-top: 57px;
-	    padding: 25px;
+	    right: 370px;
+	    padding: 20px;
 	    z-index: 10;
 	    border: 2px solid #43484C;
 	    display: none;
+	    height: auto;
 	}
 	.show_price p {
 	    margin: 6px;
-	    line-height: 2;
+	    line-height: 30px;
 	}
 	.show_price span {
     font-size: 16px;
     text-align: right;
     color: #FE6748;
 	}
+	.show_price a{
+		display: block;
+		margin-top: 10px;
+	}
+	.input_count_style{
+		list-style-type: none;
+	}
+	.input_count_style li {
+		display: inline-block;
+	}
+	.count_input {
+		width: 50px;
+	    border: 2px #43484C solid;
+	    background-color: transparent;
+	    color: #43484C;
+	    text-align: center;
+	}
+	.count_minus, .count_plus {
+		border: none;
+		background-color: transparent;
+	}
+	.cart_interface {
+	    background-color: #F9F9F9;
+	    padding: 13px;
+	    margin: 0px;
+	    border: 1px #D5D5D5 solid;
+	}
+	.tovar_line {
+    	border-bottom: 1px #D5D5D5 solid;
+    	border-top: 1px #D5D5D5 solid;
+    	background-image: url(../img/bg_one.png);
+	    background-repeat: no-repeat;
+	    background-position: center top;
+	    position: relative;
+	    line-height: 12px;
+	    margin-top: 7px;
+	}
+	.tovar_line a { text-decoration: none; color: transparent;}
+	p.cart_features { font-size: 14px; }
+
+	ul.input_count_style { margin-top: 40px; }
+
+	.cart_image { margin-top: 11px;}
+
+	.price_product {
+    	line-height: 0px;
+    	margin-top: 37px;
+	}
+	.price_product p {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.price_product h5 {
+		color: #848484;
+		font-size: 13px;
+	}
+
+	.delete_cart {
+	    margin-top: 40px;
+	    font-size: 24px;
+	    border: none;
+	    background-color: transparent;
+	    margin-left: 66px;
+	}
+	.delete_cart a{
+		text-decoration: none;		
+	    color: #848484;
+	}	
 	/*КОРЗИНА - ОКОНЧАНИЕ*/	
 
-	
+
 	.header_topline img{
 		max-width: 50%;
 		display: block;
@@ -176,13 +245,10 @@ body {
 		text-transform: uppercase;
 		padding: 0px;
 		margin: 0px;
-
 	}
-	.menu_main ul li{
-		display: inline-block;
 
+	.menu_main ul li{display: inline-block;}
 
-	}
 	.menu_main a{
 		padding: 7px;
 		color: #fff;
@@ -191,23 +257,19 @@ body {
 		-o- transition: all .25s;
 		transition: all .25s;
 	}
-	.menu_main a:hover {
-	}
-	.menu_main i {
-		display: inline-block;
-		color: red;
-	}
-	.list {
-		background-color: #43484C;
-		margin-right: 10px;
+	
+	.menu_main i { display: inline-block; color: red; }
 
-	}
+	.list { background-color: #43484C; margin-right: 10px; }
 	.list:hover {
 		//*background-color: #585D61;*//
 		border: #fff 0.1px;
 		border-style: dashed;
 	}
-
+	.tovar_line .button a {
+		float: right;
+		display: block;
+	}
 
 /*ВСПЛЫВАЮЩЕЕ ОКНО*/
 
@@ -236,11 +298,13 @@ body {
 	}
 	.button {
 		border: none;
-		padding: 10px 20px;
+		padding: 7px;
 		background-color: #FE6748;
 		color: #fff;
 		border-radius: 3px;
 		text-transform: uppercase;
+		width: 120px;
+    	text-align: center;
 	}
 	.button:hover {
 		background-color: transparent;
@@ -358,8 +422,8 @@ body {
 	}
 	.left_aside li{	
 		background-color: #43484C;
-		line-height: 41px;
-		font-size: 16px;
+		line-height: 35px;
+		font-size: 14px;
 		margin: 2px;
 
 
